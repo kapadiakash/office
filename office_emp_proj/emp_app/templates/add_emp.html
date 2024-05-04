@@ -8,9 +8,21 @@
     <title>add_emp</title>
 </head>
 <body>
+  <div class="container">
+    <h1>AK Music</h1>
+    <hr>
+    <a class="btn btn-primary" href="/index" role="button">Home</a>
+    <a class="btn btn-primary" href="/all_emp" role="button">View All Employee</a>
+    <a class="btn btn-primary" href="/add_emp" role="button">Add An Employee</a>
+    <a class="btn btn-primary" href="/remove_emp" role="button">Remove An Employee</a>
+    <a class="btn btn-primary" href="/filter_emp" role="button">Filter Employee Details</a>
+</div>
+
     <div class="container">
         <h1>Add_Emp An Employee!</h1>
     <hr>
+    
+  
     <form action="/add_emp" method="post">
           {% csrf_token %}
           <label for="first_name">First Name</label><br>

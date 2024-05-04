@@ -9,9 +9,37 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hii This is my new django Project</h1>
+        <h1>AK Music</h1>
         <hr>
-       
+        <a class="btn btn-primary" href="/index" role="button">Home</a>
+        <a class="btn btn-primary" href="/all_emp" role="button">View All Employee</a>
+        <a class="btn btn-primary" href="/add_emp" role="button">Add An Employee</a>
+        <a class="btn btn-primary" href="/remove_emp" role="button">Remove An Employee</a>
+        <a class="btn btn-primary" href="/filter_emp" role="button">Filter Employee Details</a>
+    </div>
+
+    <div class="container">
+        <h1>Filter Employee Details</h1>
+        <hr>
+        
+
+        <form action="/filter_emp" method="post">
+            {% csrf_token %}
+            <label for="first_name">First/Last Name</label><br>
+            <input type="text" id="name" name="name" value='{{ name }}'><br>
+           
+            <label for="dept" >Department</label><br>
+            <input type="text"  id="dept" name="dept" value='{{ dept }}'><br>
+  
+            <label for="role" >Role</label><br>
+            <input type="text"  id="role" name="role" value='{{ role }}'><br>
+  
+            
+            <hr>
+            
+            
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
